@@ -1,0 +1,26 @@
+li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: blue;
+}
+
+li:hover{
+  opacity: 0.8;
+  transition: 2s;
+  border-radius: 50%;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+/*.flex-li {
+  display: flex;
+  flex-direction: column;
+
+}*/

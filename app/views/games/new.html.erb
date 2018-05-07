@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row col-lg-12">
+    <h1>New Game</h1>
+  </div>
+  <ul>
+    <div class="row col-lg-12 flex-li">
+      <% @letters.each do |letter|%>
+          <li>
+            <%=letter%>
+          </li>
+      <% end %>
+    </div>
+  </ul>
+
+  <div class="row col-lg-12">
+    <h3>What is the longest word you can find ?</h3>
+  </div>
+  <div class="row col-lg-12">
+    <form action="/score" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type="text" name="choice" placeholder="...">
+          <input type="hidden" name="letters" value="<%= @letters.join %>">
+          <input type="submit" value="Click-me !" class="btn btn-danger" >
+    </form>
+  </div>
+</div>
